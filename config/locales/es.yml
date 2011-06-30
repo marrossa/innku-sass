@@ -1,0 +1,26 @@
+es:
+
+  #Models
+  members:
+    show:
+      name:               "Nombre"
+      last_name:          "Apellidos"
+      description:        "Descripcion"
+      skills:             "Habilidades"
+      twitter:            "Twitter"
+      github:             "Liga a github"
+  
+  
+  #Active Record
+  activerecord:
+    models:
+      member:             "Miembros de Innku"
+    
+    attributes:
+      member:
+        name:             "Nombre"
+        last_name:        "Apellido"
+        skills:           "Habilidades"
+        avatar:           "Foto"
+        description:      "Descripcion"
+        

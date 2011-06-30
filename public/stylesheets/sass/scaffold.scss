@@ -1,6 +1,9 @@
-$main-color: #1E7B12;
+$main-color: #F9F7F3;
 
-body { background-color: $main-color; color: #333; }
+body { 
+  background-color: $main-color; 
+  color: #333; 
+}
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -55,4 +58,10 @@ div.field, div.actions {
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
+}
+
+/*------------ ESTILOS GENERALES ------------*/
+#wrapper {
+  margin: 0 auto;
+  width: 950px;
 }

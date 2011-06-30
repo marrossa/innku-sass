@@ -1,5 +1,5 @@
 body {
-  background-color: #1e7b12;
+  background-color: #f9f7f3;
   color: #333; }
 
 body, p, ol, ul, td {
@@ -54,3 +54,8 @@ div.field, div.actions {
 #error_explanation ul li {
   font-size: 12px;
   list-style: square; }
+
+/*------------ ESTILOS GENERALES ------------*/
+#wrapper {
+  margin: 0 auto;
+  width: 950px; }

@@ -1,20 +1,39 @@
 <p id="notice"><%= notice %></p>
 
+
+<% if @member.avatar? %>
+  <%= image_tag @member.avatar.url(:medium) %>
+<% end %>
 <p>
-  <b>Name:</b>
+  <b><%= t('.name') %>:</b>
   <%= @member.name %>
 </p>
 
 <p>
-  <b>Last name:</b>
+  <b><%= t('.last_name') %>:</b>
   <%= @member.last_name %>
 </p>
 
 <p>
-  <b>Skills:</b>
+  <b><%= t('.description') %>:</b>
+  <%= @member.description %>
+</p>
+
+<p>
+  <b><%= t('.skills') %>:</b>
   <%= @member.skills %>
 </p>
 
+<p>
+  <b><%= t('.twitter') %>:</b>
+  <%= @member.twitter %>
+</p>
 
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
+<p>
+  <b><%= t('.github') %>:</b>
+  <%= @member.github %>
+</p>
+
+
+<%= link_to 'Editar', edit_member_path(@member) %> |
+<%= link_to 'Ver todos los miembros', members_path %>
