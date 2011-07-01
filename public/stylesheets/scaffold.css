@@ -1,6 +1,15 @@
 body {
-  background-color: #f9f7f3;
-  color: #333; }
+  background: #F9F7F3;
+  background: -moz-linear-gradient(top, #f9f7f3 0%, white 100%);
+  /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f9f7f3), color-stop(100, white)) fixed;
+  /* webkit */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$start-color, endColorstr=$end-color,GradientType=0 );
+  /* ie */
+  background: -o-linear-gradient(top, #f9f7f3 0%, white 100%);
+  /* opera */
+  color: #333;
+  margin: 0px; }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -56,6 +65,18 @@ div.field, div.actions {
   list-style: square; }
 
 /*------------ ESTILOS GENERALES ------------*/
-#wrapper {
+#wrapper, #content {
   margin: 0 auto;
   width: 950px; }
+
+#header {
+  background: rgba(127, 63, 0, 0.6);
+  padding: 20px;
+  margin-bottom: 20px; }
+
+#container {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px; }
