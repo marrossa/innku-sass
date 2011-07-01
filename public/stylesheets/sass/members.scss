@@ -1,0 +1,46 @@
+$main: #4F8D37;
+$gray: #888888;
+
+#header h1 {
+	color: $main;
+	font: {
+	family: helvetica;
+	size: 18px;
+	}
+}
+
+#container h1 {
+	color: $gray;
+	margin: 0px;
+	font: {
+	family: helvetica;
+	size: 14px;
+	style: italic;
+	}
+}
+
+#container table {
+	margin-top: 15px;
+}
+
+#container table th {
+	color: $gray;
+	margin: 0px;
+	padding: 0;
+	text-align: left;
+	font: {
+	family: helvetica;
+	size: 14px;
+	}
+	
+}
+
+#container table td {
+	color: $gray;
+	padding-right: 20px;
+	text-align: left;
+	font: {
+	family: helvetica;
+	size: 12px;
+	}
+}
