@@ -1,13 +1,30 @@
 $main-color: #F9F7F3;
+$main-padding: 20px;
+$main-margin: 10px;
 
-body { 
-  background-color: $main-color; 
-  color: #333; 
+@mixin radius($pixels){
+  -moz-border-radius: $pixels;
+-webkit-border-radius: $pixels;
+border-radius: $pixels;
+}
+
+@mixin linear-0-100($start-color, $end-color){
+  background: -moz-linear-gradient(top, $start-color 0%, $end-color 100%); /* firefox */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0,$start-color), color-stop(100,$end-color)) fixed; /* webkit */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$start-color, endColorstr=$end-color,GradientType=0 ); /* ie */
+background: -o-linear-gradient(top, $start-color 0%, $end-color 100%); /* opera */
+}
+
+body {
+  background: #F9F7F3;
+  @include linear-0-100(#F9F7F3, #fff);
+  color: #333;
+  margin: 0px;
 }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
+  font-size: 13px;
   line-height: 18px;
 }
 
@@ -61,7 +78,19 @@ div.field, div.actions {
 }
 
 /*------------ ESTILOS GENERALES ------------*/
-#wrapper {
+#wrapper, #content {
   margin: 0 auto;
   width: 950px;
+}
+
+#header{
+  background: opacify(rgba(127, 63, 0, 0.5), 0.1);
+  padding: $main-padding;
+  margin-bottom: $main-margin * 2;
+}
+
+#container{
+  @include radius(8px);
+  background: #fff;
+  padding: $main-padding / 2;
 }
